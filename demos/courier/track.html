@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Track R9-20417 · Relay Nine</title>
+<meta name="theme-color" content="#06080b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{ "imports": { "three": "../../vendor/three.module.min.js" } }</script>
+</head>
+<body data-track="1">
+<canvas id="city" aria-hidden="true"></canvas>
+<div class="shade" aria-hidden="true"></div>
+<header class="nav">
+  <a class="logo" href="./">RELAY<i>/</i>9</a>
+  <nav><a href="./#how">How it works</a><a href="./#services">Services</a><a href="./#board">Live board</a><a href="track.html">Track</a></nav>
+  <a class="cta" href="./#quote">Get a quote</a>
+</header>
+<main>
+<section class="track-wrap">
+  <div class="track-card" data-reveal>
+    <p class="mono lime">Live tracking</p>
+    <h1>On its way.</h1>
+    <p class="lede" style="font-size:15px;margin-bottom:18px">Northgate Labs to St. Aldric Medical. This page replays a real-time delivery on a loop.</p>
+    <aside class="order">
+      <header><span class="mono">ORDER R9-20417</span><span class="live"><b></b>Live</span></header>
+      <div class="eta"><small>Elapsed</small><strong id="elapsed">00:00</strong><small id="etaLabel">ETA 10:49</small></div>
+      <div class="bar"><i id="bar"></i></div>
+      <ol id="stepper">
+        <li><span>Order placed</span><time>10:02</time></li>
+        <li><span>Driver assigned</span><time>10:04</time></li>
+        <li><span>Picked up</span><time>10:11</time></li>
+        <li><span>Delivered</span><time>10:49</time></li>
+      </ol>
+      <footer><div class="avatar">MR</div><div><b>Maya R.</b><span>Driver · 4.98 ★ · 3,120 deliveries</span></div></footer>
+    </aside>
+  </div>
+</section>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>

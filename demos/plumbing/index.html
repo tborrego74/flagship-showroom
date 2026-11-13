@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halden &amp; Pike Plumbing · Fixed right, the first time</title>
+<meta name="description" content="Halden &amp; Pike is a family-run plumbing company with upfront pricing and a two-year guarantee. A concept site by Borrego Business Systems.">
+<meta name="theme-color" content="#12233d">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{ "imports": { "three": "../../vendor/three.module.min.js", "three/addons/": "../../vendor/addons/" } }</script>
+</head>
+<body>
+<canvas id="pipes" aria-hidden="true"></canvas>
+
+<div class="alert"><span><b></b>24/7 emergency line</span><a href="tel:5550142200">(555) 014-2200</a><span class="hide-s">Average arrival today: 38 minutes</span></div>
+<header class="nav">
+  <a class="logo" href="./"><svg viewBox="0 0 24 30" width="20" height="25"><path d="M12 1C8 8 3 13 3 19a9 9 0 0 0 18 0c0-6-5-11-9-18z" fill="#c8703f"/></svg>Halden <i>&amp;</i> Pike</a>
+  <nav><a href="#visit">How it works</a><a href="services.html">Services</a><a href="#pricing">Pricing</a><a href="#reviews">Reviews</a></nav>
+  <a class="btn" href="#book">Book a plumber</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="badge" data-reveal>Licensed · Bonded · Family-run since 1987</p>
+      <h1><span data-chars>Fixed right.</span><br><em data-chars>The first time.</em></h1>
+      <p class="lede" data-reveal style="--d:.7s">Leaks, heaters, drains and full repipes. A real person answers, a master plumber shows up, and the price is in writing before we touch a wrench.</p>
+      <div class="actions" data-reveal style="--d:.85s"><a class="btn big" href="#book">Book a plumber</a><a class="btn ghost big" href="tel:5550142200">Call (555) 014-2200</a></div>
+      <ul class="trust" data-reveal style="--d:1s"><li><b>4.9 ★</b>from 2,300+ neighbors</li><li><b>Upfront</b>pricing, in writing</li><li><b>2-year</b>workmanship guarantee</li></ul>
+    </div>
+    <div class="hero-3d" data-3d="hero"></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-pin">
+    <div class="wrap visit-head"><p class="kicker">How a visit works</p><h2>From first call <em>to dry floor.</em></h2></div>
+    <div class="visit-line" data-3d="line"></div>
+    <div class="wrap visit-steps" id="steps">
+      <article><span>1</span><h3>You call. A person answers.</h3><p>No phone tree. Tell us what's wrong and we'll give you an arrival window on the spot.</p></article>
+      <article><span>2</span><h3>We diagnose, then quote.</h3><p>Camera in the line if we need it. You get one price, in writing, before work starts.</p></article>
+      <article><span>3</span><h3>We fix it properly.</h3><p>Boot covers on, drop cloths down. Most repairs are finished in a single visit.</p></article>
+      <article><span>4</span><h3>Guaranteed for two years.</h3><p>If our work fails, we come back and make it right. No invoice, no argument.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker" data-reveal>What we do</p><h2 data-reveal>Every pipe in the house. <em>And the ones under it.</em></h2></div>
+    <div class="grid">
+      <a class="svc" href="services.html" data-reveal><svg viewBox="0 0 48 48"><path d="M24 6c-6 9-11 14-11 21a11 11 0 0 0 22 0c0-7-5-12-11-21z"/><path d="M19 28a5 5 0 0 0 5 5"/></svg><h3>Leaks &amp; repairs</h3><p>Found, fixed and pressure-tested the same day.</p><i>→</i></a>
+      <a class="svc" href="services.html" data-reveal style="--d:.06s"><svg viewBox="0 0 48 48"><rect x="14" y="6" width="20" height="34" rx="6"/><path d="M20 40v4M28 40v4M24 16c-3 4-3 6 0 8s3 4 0 8"/></svg><h3>Water heaters</h3><p>Tank and tankless. Installed, flushed and serviced.</p><i>→</i></a>
+      <a class="svc" href="services.html" data-reveal style="--d:.12s"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="5"/><path d="M24 8v11M24 29v11M8 24h11M29 24h11"/></svg><h3>Drains &amp; sewer</h3><p>Camera inspection, hydro-jetting and trenchless repair.</p><i>→</i></a>
+      <a class="svc" href="services.html" data-reveal style="--d:.18s"><svg viewBox="0 0 48 48"><path d="M6 16h20a8 8 0 0 1 8 8v18M6 26h14a4 4 0 0 1 4 4v12"/><path d="M4 13v16M20 42h18"/></svg><h3>Repiping</h3><p>Whole-home copper and PEX, with walls put back right.</p><i>→</i></a>
+      <a class="svc" href="services.html" data-reveal style="--d:.24s"><svg viewBox="0 0 48 48"><path d="M10 40V20a10 10 0 0 1 20 0v3"/><path d="M24 23h12v5H24zM30 34v2M30 40v2"/><path d="M4 40h12"/></svg><h3>Fixtures &amp; remodels</h3><p>Kitchens, baths and everything that connects to them.</p><i>→</i></a>
+      <a class="svc hot" href="#book" data-reveal style="--d:.3s"><svg viewBox="0 0 48 48"><circle cx="24" cy="26" r="15"/><path d="M24 17v9l6 4M18 5h12M24 5v6"/></svg><h3>24/7 emergency</h3><p>Burst pipe at 2 AM? A plumber is on the way in minutes.</p><i>→</i></a>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="wrap price-grid">
+    <div><p class="kicker" data-reveal>Upfront pricing</p><h2 data-reveal>Know the number <em>before we knock.</em></h2><p class="lede" data-reveal>Pick the job. This is the honest range most of our customers pay, parts and labor included.</p></div>
+    <div class="estimator" data-reveal>
+      <div class="chips" id="chips"></div>
+      <div class="est-out"><small>Typical total</small><strong><span id="lo">$185</span> – <span id="hi">$340</span></strong><p id="estNote">Most are done in under 2 hours.</p></div>
+      <a class="btn big wide" href="#book">Get my exact quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee">
+  <div class="wrap g-grid">
+    <div>
+      <p class="kicker light" data-reveal>The Halden &amp; Pike guarantee</p>
+      <h2 data-reveal>Two years. <em>No fine print.</em></h2>
+      <div class="g-stats">
+        <div data-reveal><b><span data-count="38">0</span><small>min</small></b><p>Average arrival</p></div>
+        <div data-reveal style="--d:.1s"><b><span data-count="12400">0</span></b><p>Homes served</p></div>
+        <div data-reveal style="--d:.2s"><b><span data-count="4.9">0</span><small>★</small></b><p>Across 2,300+ reviews</p></div>
+      </div>
+    </div>
+    <div class="g-3d" data-3d="valve"></div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head"><p class="kicker" data-reveal>Neighbors talk</p><h2 data-reveal>The reviews <em>write themselves.</em></h2></div>
+    <div class="rev-grid">
+      <figure data-reveal><div class="stars">★★★★★</div><blockquote>“Water through the ceiling at 11 PM. Dana was at the door in 25 minutes and had it stopped in ten more.”</blockquote><figcaption><b>Priya S.</b>Burst pipe · Maple Ridge</figcaption></figure>
+      <figure data-reveal style="--d:.1s"><div class="stars">★★★★★</div><blockquote>“The quote was the bill. To the dollar. I didn't know that was allowed in this industry.”</blockquote><figcaption><b>Marcus T.</b>Water heater · Old Town</figcaption></figure>
+      <figure data-reveal style="--d:.2s"><div class="stars">★★★★★</div><blockquote>“They repiped the whole house in three days and left it cleaner than they found it.”</blockquote><figcaption><b>Ellen &amp; Joss K.</b>Repipe · Harbor Heights</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap book-grid">
+    <div><h2 data-reveal>Water where <em>it belongs.</em></h2><p class="lede" data-reveal>Tell us what's going on. We'll call back within ten minutes, day or night.</p></div>
+    <form class="form" data-demo data-reveal>
+      <label><span>Your name</span><input placeholder="Alex Morgan"></label>
+      <label><span>Phone</span><input placeholder="(555) 000-0000"></label>
+      <label class="full"><span>What's going on?</span><select><option>Leak or burst pipe</option><option>No hot water</option><option>Clogged drain</option><option>Something else</option></select></label>
+      <button class="btn big wide" type="submit">Request a call back</button>
+      <p class="demo-note">This is a concept site, so nothing was sent. On a live build this books straight into your dispatch calendar.</p>
+    </form>
+  </div>
+  <footer class="foot"><span class="logo">Halden <i>&amp;</i> Pike</span><span>A concept site by Borrego Business Systems. Halden &amp; Pike is fictional.</span><span>© 2026</span></footer>
+</section>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>

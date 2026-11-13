@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relay Nine · Same-day courier, tracked to the door</title>
+<meta name="description" content="Relay Nine is a same-day courier for medical, legal, parts and retail. A concept site by Borrego Business Systems.">
+<meta name="theme-color" content="#06080b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/kit.css">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{ "imports": { "three": "../../vendor/three.module.min.js" } }</script>
+</head>
+<body>
+<canvas id="city" aria-hidden="true"></canvas>
+<div class="shade" aria-hidden="true"></div>
+
+<header class="nav">
+  <a class="logo" href="./">RELAY<i>/</i>9</a>
+  <nav><a href="#how">How it works</a><a href="#services">Services</a><a href="#board">Live board</a><a href="track.html">Track</a></nav>
+  <a class="cta" href="#quote">Get a quote</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="tag" data-reveal><b></b>214 drivers on the road right now</p>
+    <h1><span data-chars>Across town</span><br><span data-chars>in</span> <em data-chars>47 minutes.</em></h1>
+    <p class="lede" data-reveal style="--d:.8s">Medical, legal, parts and retail. Picked up within the hour, tracked every block, signed for at the door.</p>
+    <form class="quote" id="quote" data-demo data-reveal style="--d:1s">
+      <label><span>Pickup</span><input value="1420 Wynkoop St" aria-label="Pickup address"></label>
+      <label><span>Drop-off</span><input value="900 Auraria Pkwy" aria-label="Drop-off address"></label>
+      <button type="submit">Instant quote <span>→</span></button>
+      <p class="demo-note">Concept site: no order was placed. On a live build this returns a real price and the nearest driver.</p>
+    </form>
+  </div>
+  <div class="ticker" aria-hidden="true"><div class="ticker-in" id="ticker"></div></div>
+</section>
+
+<section class="story" id="how">
+  <div class="story-pin">
+    <div class="tag3d" id="tagPick"><b>Pickup</b><span>Northgate Labs</span></div>
+    <div class="tag3d lime" id="tagDrop"><b>Drop-off</b><span>St. Aldric Medical</span></div>
+    <div class="steps">
+      <article class="step"><p class="mono">10:02 · Order placed</p><h2>Booked in <em>40 seconds.</em></h2><p>Two addresses and a size. You get a price before you finish your coffee, and dispatch gets to work.</p></article>
+      <article class="step"><p class="mono">10:04 · Driver assigned</p><h2>The closest driver, <em>not the next one.</em></h2><p>Our dispatch engine picks whoever can reach you fastest. Maya was four blocks away.</p></article>
+      <article class="step"><p class="mono">10:11 · Picked up</p><h2>Watch it <em>move.</em></h2><p>Photo at pickup, live map, and an ETA that updates every block. No more calling to ask where it is.</p></article>
+      <article class="step"><p class="mono">10:49 · Delivered</p><h2>Signed, sealed, <em>proven.</em></h2><p>Signature, photo and timestamp land in your inbox the moment the door closes.</p></article>
+    </div>
+    <aside class="order">
+      <header><span class="mono">ORDER R9-20417</span><span class="live"><b></b>Live</span></header>
+      <div class="eta"><small>Elapsed</small><strong id="elapsed">00:00</strong><small id="etaLabel">ETA 10:49</small></div>
+      <div class="bar"><i id="bar"></i></div>
+      <ol id="stepper">
+        <li><span>Order placed</span><time>10:02</time></li>
+        <li><span>Driver assigned</span><time>10:04</time></li>
+        <li><span>Picked up</span><time>10:11</time></li>
+        <li><span>Delivered</span><time>10:49</time></li>
+      </ol>
+      <footer><div class="avatar">MR</div><div><b>Maya R.</b><span>Driver · 4.98 ★ · 3,120 deliveries</span></div></footer>
+    </aside>
+  </div>
+</section>
+
+<section class="solid numbers">
+  <div class="wrap grid4">
+    <div data-reveal><b><span data-count="99.2">0</span>%</b><p>On-time, last 12 months</p></div>
+    <div data-reveal style="--d:.1s"><b><span data-count="47">0</span><small>min</small></b><p>Median door to door</p></div>
+    <div data-reveal style="--d:.2s"><b><span data-count="1.4">0</span><small>M</small></b><p>Deliveries completed</p></div>
+    <div data-reveal style="--d:.3s"><b>24<small>/7</small></b><p>Live human dispatch</p></div>
+  </div>
+</section>
+
+<section class="solid services" id="services">
+  <div class="wrap">
+    <div class="sec-head"><p class="mono lime" data-reveal>Services</p><h2 data-reveal>Four speeds.<br><em>One standard.</em></h2></div>
+    <div class="cards">
+      <article class="card" data-reveal><span class="mono">01</span><h3>Rush</h3><b>90 min</b><p>Direct drive, nothing else on board. For the thing that should have left an hour ago.</p></article>
+      <article class="card" data-reveal style="--d:.08s"><span class="mono">02</span><h3>Same-Day</h3><b>By 5 PM</b><p>Booked by noon, delivered by close of business. The everyday workhorse.</p></article>
+      <article class="card" data-reveal style="--d:.16s"><span class="mono">03</span><h3>Routes</h3><b>Daily</b><p>Scheduled loops for labs, pharmacies and branches. Same driver, same time, every day.</p></article>
+      <article class="card" data-reveal style="--d:.24s"><span class="mono">04</span><h3>Custody</h3><b>Sealed</b><p>Chain-of-custody for specimens, court filings and anything that cannot go missing.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="solid board" id="board">
+  <div class="wrap board-grid">
+    <div><p class="mono lime" data-reveal>Live board</p><h2 data-reveal>Dispatch that <em>never blinks.</em></h2><p class="lede" data-reveal>Every order, every driver, every minute. Your team sees the same board ours does.</p>
+      <blockquote data-reveal>“We stopped calling to ask where things were.”<cite>Operations Director, regional lab network</cite></blockquote></div>
+    <div class="table" data-reveal><div class="thead mono"><span>Order</span><span>Route</span><span>Status</span><span>ETA</span></div><div id="rows"></div></div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="final-in">
+    <p class="mono lime" data-reveal>Ready when you are</p>
+    <h2 data-reveal>Send it <em>now.</em></h2>
+    <div class="final-cta" data-reveal><a class="cta big" href="#quote">Get an instant quote</a><a class="ghost" href="track.html">Track a delivery</a></div>
+  </div>
+  <footer class="foot"><span class="logo">RELAY<i>/</i>9</span><span>A concept site by Borrego Business Systems. Relay Nine is fictional.</span><span class="mono">© 2026</span></footer>
+</section>
+</main>
+<script type="module" src="main.js"></script>
+</body>
+</html>
