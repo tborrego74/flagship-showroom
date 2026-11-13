@@ -108,3 +108,12 @@ body.inside #hud{transform:translate(-50%,0)}
 .fallback-cards{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:14px}
 .fallback-cards a{padding:16px 22px;border:1px solid var(--line);border-radius:14px}
 .noscript a{text-decoration:underline}
+
+/* share-art capture mode (?og) */
+body.og .top-cta,body.og .hint,body.og .label .e,body.og .carousel,body.og .kicker{display:none}
+body.og .intro{top:118px;left:64px}
+body.og .intro h1{font-size:74px}
+body.og .top{padding:40px 64px}
+body.og .brand-t{font-size:17px}body.og .brand-t em{font-size:12px}
+body.og .brand-b{width:44px;height:44px;font-size:26px}
+body.og .label .t{font-size:22px}

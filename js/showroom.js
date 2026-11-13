@@ -595,6 +595,7 @@ computeDesk();
 camera.position.copy(desk.pos); camera.quaternion.copy(desk.quat);
 renderer.compile(scene, camera);
 tick();
+if (new URLSearchParams(location.search).has('og')) document.body.classList.add('og');
 const begin = () => {
   $('#loader').classList.add('done'); introT = 0;
   if (new URLSearchParams(location.search).has('skip')) {
