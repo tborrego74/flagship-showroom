@@ -28,3 +28,7 @@ All three demo brands are fictional.
     python3 -m http.server 4173
 
 Then open http://localhost:4173. After changing a demo's hero, refresh the screen images with `node tools/screens.mjs` (needs Playwright).
+
+## Photography
+
+The Solmère House demo uses real photographs from Unsplash (Unsplash License, free for commercial use). The web-sized copies live in `demos/luxury/img` and the photographers are credited on `demos/luxury/credits.html`. For a paying client, replace these with their own photography.
