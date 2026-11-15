@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Showroom visits · Borrego Business Systems</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#060607">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#060607;--card:#101012;--paper:#ECEAE4;--dim:rgba(236,234,228,.58);--faint:rgba(236,234,228,.32);--line:rgba(236,234,228,.12);--gold:#d8b27a;--good:#8fd0a0;--serif:'Instrument Serif',Georgia,serif;--sans:'Inter',system-ui,-apple-system,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased;min-height:100vh}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(16px,3vw,32px) 80px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding:26px 0 22px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand i{width:34px;height:34px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-style:normal;font-size:20px;color:var(--gold)}
+.brand b{font-weight:500;font-size:13px;display:block}
+.brand span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim)}
+.tools{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.seg{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{padding:7px 14px;border-radius:999px;font-size:12px;font-weight:500;color:var(--dim)}
+.seg button.on{background:var(--paper);color:#0b0b0c}
+.ghost{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--dim)}
+.ghost:hover{color:var(--paper);border-color:var(--faint)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,56px);line-height:1;letter-spacing:-.01em;margin:10px 0 6px}
+h1 em{color:var(--dim)}
+.sub{color:var(--dim);margin-bottom:26px;font-size:13px}
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.tile small{display:block;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.tile b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(38px,5vw,54px);line-height:1.05;margin-top:8px}
+.tile span{font-size:12px;color:var(--dim)}
+.tile.hot b{color:var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:12px}
+.c12{grid-column:span 12}.c7{grid-column:span 7}.c5{grid-column:span 5}.c4{grid-column:span 4}
+h2{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-weight:500;margin-bottom:16px}
+.days{display:flex;align-items:flex-end;gap:3px;height:150px}
+.days div{flex:1;min-width:0;background:rgba(216,178,122,.28);border-radius:3px 3px 0 0;position:relative;min-height:2px}
+.days div.has{background:var(--gold)}
+.days div:hover::after{content:attr(data-t);position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);white-space:nowrap;background:#1c1c1f;border:1px solid var(--line);padding:4px 8px;border-radius:6px;font-size:11px;z-index:2}
+.axis{display:flex;justify-content:space-between;margin-top:8px;font-size:11px;color:var(--faint)}
+.row{display:grid;grid-template-columns:minmax(0,1.7fr) 1.3fr auto;gap:12px;align-items:center;padding:8px 0;font-size:13px}
+.row + .row{border-top:1px solid var(--line)}
+.row span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar{height:6px;border-radius:3px;background:rgba(236,234,228,.08);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--gold);border-radius:3px}
+.row em{font-style:normal;color:var(--dim);font-variant-numeric:tabular-nums;text-align:right;min-width:64px}
+.none{color:var(--faint);font-size:13px;padding:6px 0}
+.visit{border-top:1px solid var(--line)}
+.visit:first-of-type{border-top:0}
+.visit summary{list-style:none;display:grid;grid-template-columns:150px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 0;cursor:pointer}
+.visit summary::-webkit-details-marker{display:none}
+.visit .when{color:var(--dim);font-size:12.5px}
+.visit .who{min-width:0}
+.visit .who b{font-weight:500;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.visit .who span{color:var(--dim);font-size:12.5px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.tag{font-size:11px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--dim);white-space:nowrap}
+.tag.gold{border-color:var(--gold);color:var(--gold)}
+.tag.good{border-color:rgba(143,208,160,.5);color:var(--good)}
+.steps{list-style:none;padding:2px 0 18px 164px}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:10px;padding:4px 0;font-size:13px;color:var(--dim)}
+.steps li time{color:var(--faint);font-variant-numeric:tabular-nums}
+.steps li.key{color:var(--paper)}
+.gate{min-height:100vh;display:grid;place-content:center;justify-items:center;text-align:center;gap:16px;padding:24px}
+.gate h1{margin:0}
+.gate p{color:var(--dim);max-width:360px}
+#msg{color:var(--gold);min-height:20px;font-size:13px}
+[hidden]{display:none!important}
+@media (max-width:820px){
+  .tiles{grid-template-columns:1fr 1fr}
+  .c7,.c5,.c4{grid-column:span 12}
+  .visit summary{grid-template-columns:1fr;gap:6px}
+  .tags{justify-content:flex-start}
+  .steps{padding-left:0}
+}
+</style>
+</head>
+<body>
+
+<section class="gate" id="gate">
+  <div class="brand"><i>B</i></div>
+  <h1>Showroom <em>visits</em></h1>
+  <p>Sign in with your Borrego Business Systems Google account to see who has been looking.</p>
+  <div id="gbtn"></div>
+  <p id="msg"></p>
+</section>
+
+<div class="wrap" id="app" hidden>
+  <header>
+    <div class="brand"><i>B</i><div><b>Borrego Business Systems</b><span>Showroom admin</span></div></div>
+    <div class="tools">
+      <div class="seg" id="range"><button data-d="1">Today</button><button data-d="7" class="on">7 days</button><button data-d="30">30 days</button></div>
+      <button class="ghost" id="refresh">Refresh</button>
+      <button class="ghost" id="out">Sign out</button>
+    </div>
+  </header>
+  <h1 id="headline">Showroom <em>visits</em></h1>
+  <p class="sub" id="sub"></p>
+
+  <div class="tiles">
+    <div class="card tile"><small>Visitors</small><b id="k-visits">0</b><span id="k-visits-s"></span></div>
+    <div class="card tile"><small>Stepped into a site</small><b id="k-open">0</b><span id="k-open-s"></span></div>
+    <div class="card tile hot"><small>Clicked Book a call</small><b id="k-cta">0</b><span id="k-cta-s"></span></div>
+    <div class="card tile"><small>Typical time on site</small><b id="k-time">0s</b><span id="k-time-s"></span></div>
+  </div>
+
+  <div class="grid">
+    <div class="card c7"><h2>Visits per day</h2><div class="days" id="days"></div><div class="axis" id="axis"></div></div>
+    <div class="card c5"><h2>How far they get</h2><div id="funnel"></div></div>
+    <div class="card c4"><h2>Which site they open</h2><div id="sites"></div></div>
+    <div class="card c4"><h2>Where they come from</h2><div id="sources"></div></div>
+    <div class="card c4"><h2>Where they are</h2><div id="places"></div></div>
+    <div class="card c12"><h2>Recent visits <span style="letter-spacing:0;text-transform:none;color:var(--faint)">· tap one to see what they did</span></h2><div id="visits"></div></div>
+  </div>
+  <p class="sub" style="margin-top:22px">Visits are anonymous: no names, emails or IP addresses are stored. Any device you sign in on here stops being counted, so your own browsing does not inflate the numbers.</p>
+</div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const SITES = { luxury: 'Solmère House', courier: 'Relay Nine', plumbing: 'Halden & Pike' };
+const PAGES = { suites: 'the Suites page', credits: 'the photo credits', track: 'the tracking page', services: 'the Services page' };
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+let token = '', data = null, days = 7, local = false;
+try { localStorage.setItem('bbs_owner', '1'); } catch {}
+
+// ---------- sign-in ----------
+const msg = (t) => { $('#msg').textContent = t || ''; };
+async function boot() {
+  let cfg = {};
+  try { cfg = await (await fetch('/api/config')).json(); } catch { return msg('Could not reach the server. Try again in a minute.'); }
+  local = !!cfg.local;
+  if (local) return load();
+  if (!cfg.configured || !cfg.clientId) return msg('Google sign-in is not connected yet.');
+  try { token = sessionStorage.getItem('bbs_admin') || ''; } catch {}
+  if (token && await load(true)) return;
+  const s = document.createElement('script'); s.src = 'https://accounts.google.com/gsi/client'; s.async = true;
+  s.onload = () => {
+    google.accounts.id.initialize({ client_id: cfg.clientId, auto_select: true, callback: (r) => { token = r.credential; try { sessionStorage.setItem('bbs_admin', token); } catch {} load(); } });
+    google.accounts.id.renderButton($('#gbtn'), { theme: 'filled_black', size: 'large', shape: 'pill', text: 'signin_with' });
+    google.accounts.id.prompt();
+  };
+  s.onerror = () => msg('Google sign-in could not load. Check your connection or ad blocker.');
+  document.head.appendChild(s);
+}
+async function load(quiet) {
+  if (!quiet) msg('Loading…');
+  try {
+    const r = await fetch('/api/stats', { headers: token ? { authorization: 'Bearer ' + token } : {} });
+    const j = await r.json();
+    if (!r.ok) { if (r.status === 401) { token = ''; try { sessionStorage.removeItem('bbs_admin'); } catch {} } if (!quiet) msg(j.error || 'Something went wrong.'); return false; }
+    data = j; msg(''); $('#gate').hidden = true; $('#app').hidden = false; render(); return true;
+  } catch { if (!quiet) msg('Could not load the visits. Try again.'); return false; }
+}
+$('#out').onclick = () => { try { sessionStorage.removeItem('bbs_admin'); } catch {} if (window.google) google.accounts.id.disableAutoSelect(); location.reload(); };
+$('#refresh').onclick = () => load(true).then((ok) => { if (!ok) location.reload(); });
+$('#range').onclick = (e) => { const b = e.target.closest('button'); if (!b) return; days = +b.dataset.d; [...$('#range').children].forEach((x) => x.classList.toggle('on', x === b)); render(); };
+
+// ---------- reading a visit ----------
+function read(v) {
+  const sites = {}, steps = []; let cta = false, ready = false, form = false;
+  const site = (id) => (sites[id] ||= { opens: 0, depth: 0, laptop: 0, phone: 0 });
+  for (const [t, n, d] of v.ev || []) {
+    const [a, b] = String(d).split(' '); const [sid, sub] = String(a || '').split('/'); const name = SITES[sid];
+    let text = '', key = false;
+    if (n === 'page') {
+      if (a === 'showroom') text = 'Landed on the showroom';
+      else if (name && sub) text = `Looked at ${PAGES[sub] || sub} of ${name}`;
+      else if (name && b === 'direct') { site(sid).opens++; text = `Opened ${name} directly, outside the showroom`; }
+    } else if (n === 'ready') { ready = true; text = 'The 3D desk finished loading'; }
+    else if (n === 'enter' && name) { const s = site(sid); s.opens++; s[b === 'phone' ? 'phone' : 'laptop']++; text = `Stepped into ${name} on the ${b === 'phone' ? 'phone' : 'laptop'}`; key = true; }
+    else if (n === 'exit') text = 'Went back to the desk';
+    else if (n === 'depth' && name) { const s = site(sid); s.depth = Math.max(s.depth, +b || 0); text = `Scrolled ${b}% of ${name}${sub ? ' (' + (PAGES[sub] || sub) + ')' : ''}`; }
+    else if (n === 'form' && name) { form = true; text = `Tried the form on ${name}`; key = true; }
+    else if (n === 'cta') { cta = true; text = 'Clicked Book a call'; key = true; }
+    else if (n === 'main') text = 'Clicked through to the main Borrego site';
+    if (text) steps.push({ t, text, key });
+  }
+  const opened = Object.keys(sites).filter((k) => sites[k].opens);
+  const deep = Object.values(sites).some((s) => s.depth >= 50);
+  return { sites, steps, cta, ready, form, opened, deep };
+}
+const dur = (s) => (s < 60 ? `${Math.round(s)}s` : `${Math.floor(s / 60)}m ${String(Math.round(s % 60)).padStart(2, '0')}s`);
+const clock = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+const dayKey = (t) => { const d = new Date(t); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; };
+const source = (v) => v.src || v.ref || 'Direct link';
+const place = (v) => [v.city, v.region].filter(Boolean).join(', ') || v.country || 'Unknown';
+const gadget = (v) => `${v.touch && Math.min(v.w, v.h) < 600 ? 'Phone' : v.touch ? 'Tablet' : 'Computer'} · ${v.os || ''} ${v.br || ''}`.trim();
+
+function rows(el, map, total, empty) {
+  const list = Object.entries(map).sort((a, b) => b[1] - a[1]).slice(0, 7);
+  const max = Math.max(1, ...list.map((x) => x[1]));
+  el.innerHTML = list.length ? list.map(([k, n]) => `<div class="row"><span title="${esc(k)}">${esc(k)}</span><div class="bar"><i style="width:${(n / max) * 100}%"></i></div><em>${n}${total ? ` · ${Math.round((n / total) * 100)}%` : ''}</em></div>`).join('') : `<p class="none">${empty}</p>`;
+}
+
+function render() {
+  const now = data.now, start = new Date(); start.setHours(0, 0, 0, 0); start.setDate(start.getDate() - (days - 1));
+  const all = data.visits.map((v) => ({ ...v, r: read(v) })).sort((a, b) => b.t0 - a.t0);
+  const vs = all.filter((v) => v.t0 >= +start);
+  const n = vs.length, pct = (k) => (n ? `${Math.round((k / n) * 100)}% of visitors` : '');
+  const label = days === 1 ? 'today' : `in the last ${days} days`;
+
+  $('#sub').textContent = n ? `${n} ${n === 1 ? 'visit' : 'visits'} ${label}. Updated ${new Date(now).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}.` : `No visits ${label} yet. Share the link and check back.`;
+  const opened = vs.filter((v) => v.r.opened.length).length, cta = vs.filter((v) => v.r.cta).length;
+  const back = vs.filter((v) => v.back).length;
+  const times = vs.map((v) => v.dur).filter((d) => d > 0).sort((a, b) => a - b);
+  $('#k-visits').textContent = n; $('#k-visits-s').textContent = n ? `${back} returning` : '';
+  $('#k-open').textContent = opened; $('#k-open-s').textContent = pct(opened);
+  $('#k-cta').textContent = cta; $('#k-cta-s').textContent = pct(cta);
+  $('#k-time').textContent = times.length ? dur(times[Math.floor(times.length / 2)]) : '0s';
+  $('#k-time-s').textContent = times.length ? `longest ${dur(times[times.length - 1])}` : '';
+
+  // visits per day (always at least a week of bars so the chart has shape)
+  const span = Math.max(days, 7), counts = {}; all.forEach((v) => { const k = dayKey(v.t0); counts[k] = (counts[k] || 0) + 1; });
+  const list = []; for (let i = span - 1; i >= 0; i--) { const d = new Date(); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - i); list.push([d, counts[dayKey(d)] || 0]); }
+  const max = Math.max(1, ...list.map((x) => x[1]));
+  $('#days').innerHTML = list.map(([d, c]) => `<div class="${c ? 'has' : ''}" style="height:${Math.max(1.5, (c / max) * 100)}%" data-t="${d.toLocaleDateString([], { month: 'short', day: 'numeric' })}: ${c} ${c === 1 ? 'visit' : 'visits'}"></div>`).join('');
+  $('#axis').innerHTML = `<span>${list[0][0].toLocaleDateString([], { month: 'short', day: 'numeric' })}</span><span>Busiest day: ${max === 1 && !all.length ? 0 : max}</span><span>Today</span>`;
+
+  // funnel
+  const f = [['Landed', n], ['3D desk loaded', vs.filter((v) => v.r.ready || v.r.opened.length).length], ['Stepped into a site', opened], ['Opened two or more', vs.filter((v) => v.r.opened.length > 1).length], ['Scrolled half a site', vs.filter((v) => v.r.deep).length], ['Clicked Book a call', cta]];
+  $('#funnel').innerHTML = f.map(([k, c]) => `<div class="row"><span>${k}</span><div class="bar"><i style="width:${n ? (c / n) * 100 : 0}%"></i></div><em>${c}${n ? ` · ${Math.round((c / n) * 100)}%` : ''}</em></div>`).join('');
+
+  const sites = {}, src = {}, where = {};
+  vs.forEach((v) => { v.r.opened.forEach((k) => { sites[SITES[k]] = (sites[SITES[k]] || 0) + 1; }); src[source(v)] = (src[source(v)] || 0) + 1; where[place(v)] = (where[place(v)] || 0) + 1; });
+  rows($('#sites'), sites, n, 'Nobody has stepped into a site yet.');
+  rows($('#sources'), src, n, 'No visits yet.');
+  rows($('#places'), where, n, 'No visits yet.');
+
+  $('#visits').innerHTML = vs.length ? vs.slice(0, 60).map((v) => {
+    const r = v.r, d = new Date(v.t0);
+    const tags = [r.cta && '<span class="tag gold">Clicked Book a call</span>', v.back && '<span class="tag good">Returning</span>', ...r.opened.map((k) => `<span class="tag">${SITES[k]}${r.sites[k].depth ? ' ' + r.sites[k].depth + '%' : ''}</span>`), `<span class="tag">${dur(v.dur)}</span>`].filter(Boolean).join('');
+    return `<details class="visit"><summary><span class="when">${d.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })}, ${d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}</span><span class="who"><b>${esc(place(v))}</b><span>${esc(gadget(v))} · ${source(v) === 'Direct link' ? 'direct link' : 'from ' + esc(source(v))}</span></span><span class="tags">${tags}</span></summary><ul class="steps">${r.steps.map((s) => `<li class="${s.key ? 'key' : ''}"><time>${clock(s.t)}</time><span>${esc(s.text)}</span></li>`).join('') || '<li><time></time><span>Left before doing anything.</span></li>'}</ul></details>`;
+  }).join('') : '<p class="none">Nothing here yet. Visits show up within a minute of someone opening the site.</p>';
+}
+boot();
+</script>
+</body>
+</html>

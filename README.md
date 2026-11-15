@@ -25,10 +25,22 @@ All three demo brands are fictional.
 
 ## Local preview
 
-    python3 -m http.server 4173
+    node tools/dev.mjs
 
 Then open http://localhost:4173. After changing a demo's hero, refresh the screen images with `node tools/screens.mjs` (needs Playwright).
 
 ## Photography
 
 The Solmère House demo uses real photographs from Unsplash (Unsplash License, free for commercial use). The web-sized copies live in `demos/luxury/img` and the photographers are credited on `demos/luxury/credits.html`. For a paying client, replace these with their own photography.
+
+## Visit tracking and the admin page
+
+`js/track.js` records anonymous visits (no cookies, names or IP addresses) and posts them to `/api/t`. Records are stored as small JSON files in a Vercel Blob store. `/admin` shows them and is protected by Google sign-in.
+
+Vercel environment variables:
+
+- `BLOB_READ_WRITE_TOKEN`: added automatically when a Blob store is connected to the project.
+- `GOOGLE_CLIENT_ID`: a Google OAuth web client ID whose authorised JavaScript origin is the site's address.
+- `ADMIN_EMAILS`: comma-separated Google addresses allowed to sign in.
+
+To test locally run `node tools/dev.mjs` and open http://localhost:4173/admin/. Local runs skip sign-in and store visits in `.data/`. Signing in on `/admin` (or opening the site once with `?notrack`) stops that device from being counted.

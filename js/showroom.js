@@ -341,6 +341,7 @@ function enter(L, device = 'laptop') {
   const sameSite = from === 'inside' && current === L;
   const start = () => {
     current = L; dev = device;
+    window.bbsTrack?.('enter', `${L.site.id} ${device}`);
     L.lidTarget = OPEN; L.lift = 0;
     poseA.pos.copy(camera.position); poseA.quat.copy(camera.quaternion);
     fly = { t: 0, dur: sameSite ? 1.2 : from === 'inside' ? 2.0 : 1.55, to: 'inside', arc: from === 'inside' && !sameSite, started: performance.now() };
@@ -358,6 +359,7 @@ function enter(L, device = 'laptop') {
 }
 function exit() {
   if (mode !== 'inside') return;
+  window.bbsTrack?.('exit', current ? current.site.id : '');
   viewer.classList.remove('on');
   history.replaceState(null, '', location.pathname + location.search);
   setTimeout(() => {
@@ -499,7 +501,7 @@ function tick() {
     });
     spots.forEach((s, i) => { if (introT > 1.2 + i * 0.3) s.target = 1; });
     if (introT > 3.6) {
-      mode = 'desk'; document.body.classList.add('ready');
+      mode = 'desk'; document.body.classList.add('ready'); window.bbsTrack?.('ready');
       const [hid, hdev] = location.hash.slice(1).split('-');
       const want = laptops.find((L) => L.site.id === hid);
       if (want) setTimeout(() => enter(want, hdev === 'mobile' ? 'phone' : 'laptop'), 500);
