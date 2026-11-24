@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free website waitlist · Borrego Business Systems</title>
+<meta name="description" content="I'm building free websites for local businesses. Each week I pick two from this waitlist. Join in two minutes.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://websites.borregobusinesssystems.com/waitlist">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Borrego Business Systems">
+<meta property="og:url" content="https://websites.borregobusinesssystems.com/waitlist">
+<meta property="og:title" content="A free website for your business">
+<meta property="og:description" content="I'm building free websites for local businesses. Each week I pick two from the waitlist. Join in two minutes.">
+<meta property="og:image" content="https://websites.borregobusinesssystems.com/assets/og/waitlist.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A free website for your business">
+<meta name="twitter:description" content="I'm building free websites for local businesses. Each week I pick two from the waitlist. Join in two minutes.">
+<meta name="twitter:image" content="https://websites.borregobusinesssystems.com/assets/og/waitlist.jpg">
+<meta name="theme-color" content="#060607">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/waitlist/waitlist.css">
+<script src="/js/track.js" defer></script>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="top">
+  <a class="brand" href="https://borregobusinesssystems.com" target="_blank" rel="noopener">
+    <span class="brand-b">B</span>
+    <span class="brand-t">Borrego Business Systems<em>Websites</em></span>
+  </a>
+  <a class="work-link" href="/">See my work <span>→</span></a>
+</header>
+
+<main class="page">
+  <section class="hero">
+    <p class="kicker"><span class="dot"></span>Free website waitlist</p>
+    <h1>A new website for your business. <i>On&nbsp;me.</i></h1>
+    <p class="lede">I'm Tony Borrego. I build websites that make a business look as good as the work it does. Right now I'm building a few for free, and every week I pick two businesses from this list.</p>
+  </section>
+
+  <section class="get">
+    <h2>What you get</h2>
+    <ul class="ticks">
+      <li>A custom website built around your business, not a template</li>
+      <li>Looks sharp on phones and computers</li>
+      <li>Two rounds of revisions so it feels right</li>
+      <li>No cost and no contract</li>
+    </ul>
+    <p class="ask"><b>The only ask:</b> I'd like to feature your site in my portfolio.</p>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>Join the list.</b> It takes about two minutes.</li>
+      <li><b>I read every one.</b> Each week I pick the two businesses I think I can help most. It's not first come, first served, so tell me a little about yours.</li>
+      <li><b>If you're picked,</b> I'll reach out to set up a short call and get started.</li>
+    </ol>
+    <p class="note">Not picked this week? You stay on the list for the next round.</p>
+  </section>
+
+  <section class="formcard" id="join">
+    <form id="form" novalidate>
+      <h2 class="form-h">Join the waitlist</h2>
+      <div class="pair">
+        <label>Your name<input name="name" autocomplete="name" required maxlength="120"></label>
+        <label>Business name<input name="business" autocomplete="organization" required maxlength="160"></label>
+      </div>
+      <div class="pair">
+        <label>Email<input name="email" type="email" autocomplete="email" inputmode="email" required maxlength="160"></label>
+        <label>Phone <span class="opt">optional</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40"></label>
+      </div>
+      <label>Current website <span class="opt">optional</span><input name="website" autocomplete="url" inputmode="url" maxlength="200" placeholder="yourbusiness.com"></label>
+      <label>What does your business do?<textarea name="industry" rows="2" required maxlength="600" placeholder="Family-owned landscaping company serving the north side since 2012"></textarea></label>
+      <label>What do you want a new website to do for you?<textarea name="goals" rows="3" required maxlength="3000" placeholder="More calls, look more professional, show off our work, make booking easier…"></textarea></label>
+      <div class="hp" aria-hidden="true"><label>Leave this empty<input name="company_motto" tabindex="-1" autocomplete="off"></label></div>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" type="submit" id="send">Join the waitlist <span>→</span></button>
+      <p class="fine">I'll only use this to talk with you about your website. No spam, and your info is never sold or shared.</p>
+    </form>
+
+    <div class="done" id="done" hidden tabindex="-1">
+      <div class="check" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h2>You're on the list<span id="done-name"></span>.</h2>
+      <p>Thanks for telling me about <span id="done-biz">your business</span>. I go through the list every week and pick two. If yours is picked, I'll reach out by email.</p>
+      <p>While you wait, take a look at a few sites I've built.</p>
+      <a class="btn" href="/">See examples of my work <span>→</span></a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© Borrego Business Systems</span>
+  <a href="/">Examples of my work</a>
+</footer>
+
+<script>
+(() => {
+  const q = new URLSearchParams(location.search), t0 = Date.now();
+  const $ = (s) => document.querySelector(s), form = $('#form'), err = $('#err'), send = $('#send');
+  let ref = ''; try { const h = new URL(document.referrer).hostname; if (h && h !== location.hostname) ref = h.replace(/^www\./, ''); } catch {}
+  const src = (q.get('utm_source') || q.get('ref') || q.get('src') || '').slice(0, 60), camp = (q.get('utm_campaign') || '').slice(0, 60);
+
+  // keep the source on the "see my work" links so a visit there is credited to the same post
+  if (src) document.querySelectorAll('a[href="/"]').forEach((a) => { a.href = '/?utm_source=' + encodeURIComponent(src); });
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault(); err.textContent = '';
+    const f = Object.fromEntries(new FormData(form));
+    const need = [['name', 'your name'], ['business', 'your business name'], ['email', 'your email'], ['industry', 'what your business does'], ['goals', 'what you want from a new site']].filter(([k]) => !String(f[k] || '').trim());
+    form.querySelectorAll('[required]').forEach((el) => el.classList.toggle('bad', need.some(([k]) => k === el.name)));
+    if (need.length) { err.textContent = 'Please add ' + need.map((x) => x[1]).join(', ').replace(/, ([^,]*)$/, ' and $1') + '.'; form.querySelector('.bad').focus(); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(String(f.email).trim())) { const el = form.email; el.classList.add('bad'); err.textContent = 'That email does not look quite right.'; el.focus(); return; }
+    send.disabled = true; send.firstChild.textContent = 'Sending… ';
+    try {
+      const r = await fetch('/api/waitlist', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ ...f, src, camp, ref, elapsed: Date.now() - t0 }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(j.error || 'We could not save that just now. Please try again in a minute.');
+      const first = String(f.name).trim().split(/\s+/)[0];
+      $('#done-name').textContent = first ? ', ' + first : '';
+      $('#done-biz').textContent = String(f.business).trim();
+      form.hidden = true; $('#done').hidden = false; $('#done').focus();
+      $('#join').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (window.bbsTrack) window.bbsTrack('join', 'waitlist');
+    } catch (ex) {
+      err.textContent = ex.message || 'Something went wrong. Please try again.';
+      send.disabled = false; send.firstChild.textContent = 'Join the waitlist ';
+    }
+  });
+  form.addEventListener('input', (e) => e.target.classList.remove('bad'));
+})();
+</script>
+</body>
+</html>

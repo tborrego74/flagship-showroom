@@ -44,3 +44,7 @@ Vercel environment variables:
 - `ADMIN_EMAILS`: comma-separated Google addresses allowed to sign in.
 
 To test locally run `node tools/dev.mjs` and open http://localhost:4173/admin/. Local runs skip sign-in and store visits in `.data/`. Signing in on `/admin` (or opening the site once with `?notrack`) stops that device from being counted.
+
+## Free website waitlist
+
+`/waitlist` is the signup page for the free website offer (share it as `/waitlist?utm_source=facebook` so the source is recorded). The form posts to `/api/waitlist`, which stores each signup as a JSON file under `waitlist/` in the same Blob store, with a long random file name. A hidden honeypot field and a minimum fill time quietly drop bot submissions. Signups are only read back by `/api/signups`, which needs the admin Google sign-in, and they show at the top of `/admin` with a CSV download. The share image is `assets/og/waitlist.jpg`, rendered from `tools/og-waitlist.html`.
