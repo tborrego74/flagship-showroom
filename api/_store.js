@@ -37,3 +37,37 @@ export async function listVisits(sinceDay, cap = 1500) {
   }
   return out;
 }
+
+// ---------- waitlist signups ----------
+// Each signup is one JSON file under waitlist/. The path has a long random part, so the file
+// cannot be guessed, and listing the folder needs the server-side token. Only /api/signups
+// (behind Google sign-in) ever reads them back.
+export async function putSignup(rec) {
+  const name = `${new Date(rec.at).toISOString().replace(/[:.]/g, '-')}-${rec.id}`;
+  const body = JSON.stringify(rec);
+  if (local) { await fs.mkdir(path.join(dir, '_waitlist'), { recursive: true }); await fs.writeFile(path.join(dir, '_waitlist', name + '.json'), body); return; }
+  const { put } = await import('@vercel/blob');
+  await put(`waitlist/${name}.json`, body, { access: 'public', addRandomSuffix: true, contentType: 'application/json', cacheControlMaxAge: 60, token });
+}
+
+// every signup, newest first
+export async function listSignups(cap = 5000) {
+  const out = [];
+  if (local) {
+    let files = []; try { files = await fs.readdir(path.join(dir, '_waitlist')); } catch {}
+    for (const f of files.sort().reverse().slice(0, cap)) out.push(JSON.parse(await fs.readFile(path.join(dir, '_waitlist', f), 'utf8')));
+    return out;
+  }
+  const { list } = await import('@vercel/blob');
+  let cursor, blobs = [];
+  do {
+    const r = await list({ prefix: 'waitlist/', limit: 1000, cursor, token });
+    blobs.push(...r.blobs); cursor = r.hasMore ? r.cursor : undefined;
+  } while (cursor && blobs.length < cap);
+  blobs = blobs.sort((a, b) => (a.pathname < b.pathname ? 1 : -1)).slice(0, cap);
+  for (let i = 0; i < blobs.length; i += 25) {
+    const part = await Promise.all(blobs.slice(i, i + 25).map((b) => fetch(b.url, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null)));
+    out.push(...part.filter(Boolean));
+  }
+  return out.sort((a, b) => b.at - a.at);
+}

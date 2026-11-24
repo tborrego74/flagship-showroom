@@ -47,7 +47,7 @@
 
   // which page: "showroom" or "luxury", "luxury/suites", ...
   const m = location.pathname.match(/\/demos\/([^/]+)\/?([^/.]*)/);
-  const page = m ? m[1] + (m[2] && m[2] !== 'index' ? '/' + m[2] : '') : 'showroom';
+  const page = m ? m[1] + (m[2] && m[2] !== 'index' ? '/' + m[2] : '') : location.pathname.startsWith('/waitlist') ? 'waitlist' : 'showroom';
   let framed = false; try { framed = window.top !== window; } catch { framed = true; }
   track('page', page + (m && !framed ? ' direct' : ''));
 
